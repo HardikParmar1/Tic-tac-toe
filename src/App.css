@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+body{
+  background-color: #222831;
+  font-family: 'Roboto', sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.game-title p{
+  display: inline;
+  font-size: 40px;
+  font-weight: bold;
+  color:#A8BEC9;
+  letter-spacing: 1px;
+  margin: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+.game{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  width: 290px;
+}
+.game-details{
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  width: 290px;
+}
+.stats{
+  color:#A8BEC9;
+  font-size:18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 90px;
+  padding:5px;
+  border-radius: 10px;
+  text-align: center;
+  background-color:#1F3540;
+  box-shadow: 0px 5px 5px 0px #10212B;
+  -webkit-box-shadow: 0px 5px 5px 0px #10212B;
+  -moz-box-shadow: 0px 5px 5px 0px #10212B;
+  margin: 0 0 10px 33px;
+}
+.players-logo{
+  font-size:30px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color:#33c3bf;
+  margin: 10px;
+}
+.players-logo span{
+  color:#edae36;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.reset-button{
+  background-color: #A8BEC9;
+  height: 33px;
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  margin:5px 5px 10px 50px;
+  box-shadow: 0px 2px 0px 0px rgba(107,135,145,0.75);
+}
+.reset-icon{
+width: 21px;
+}
+
+.box{
+  width: 80px;
+  height:80px;
+  background-color:#1F3540;
+  margin: 8px;
+  border-radius: 7px;
+  box-shadow: 0 5px 5px 0 #10212B;
+  -webkit-box-shadow: 0 5px 5px 0px #10212B;
+  -moz-box-shadow: 0 5px 5px 0px #10212B;
+  color:#33c3bf;
+  font-size: 35px;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  justify-content:center;
+}
+/* ------------------Stats section -----------------------------------*/
+.player-box{
+  width: 80px;
+  height: 30px;
+  background-color: #33c3bf;
+  color:#192A32;
+  margin: 8px;
+  padding: 4px 0;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+.player-box p{
+  margin-bottom: 2px;
+  opacity: 0.9;
+  padding: 0.8px;
+}
+.mode{
+  background-color: #A8BEC9;
+}
+.player2{
+  background-color: #edae36;
+}
+
+/* ----------------------- Banner  ---------------------------*/
+.winner{
+  width: 100vw;
+  background-color: #1f3540;
+  position: absolute;
+  color:#2FC5BF;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s;
+  font-size: 28px;
+  opacity: 1;
+  letter-spacing: 3px;
+}
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    opacity: 1;
   }
+}
+.banner-btn{
+  margin: 10px;
+  border-radius: 5px;
+  border:none;
+  padding: 8px 17px;
+  cursor: pointer;
+}
+.winner .banner-btn:first-child{
+  background-color: #A8BEC9;
+  box-shadow: 0px 2px 0px 0px rgba(107,135,145,0.75);
+}
+.winner .banner-btn:last-child{
+  background-color: #edae36;
+  box-shadow: 0px 2px 0px 0px rgba(214,149,32,0.75);
 }
